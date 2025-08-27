@@ -5,7 +5,6 @@ const Textarea = ({bgcolor}) => {
   let color=bgcolor==="darkgray"?"white":"black"
   const showChanges = (e) =>{
     settexts(e.target.value)
-     console.log()
   };
   return (
     <div>
@@ -54,7 +53,7 @@ const Textarea = ({bgcolor}) => {
           <button
             className=" shadow-lg rounded-lg bg-slate-400 hover:bg-slate-500 hover:scale-95 m-2 p-2"
             onClick={() => {
-              navigator.clipboard.writeText(texts)
+              window.navigator.clipboard.writeText(texts)
             }}
           >
             Copy
